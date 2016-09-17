@@ -7,6 +7,7 @@ body {
 .container {
 	width: 80%;
 	margin: 0 auto;
+	position: relative;
 }
 
 
@@ -108,11 +109,14 @@ header {
 
 
 aside {
-	float: right;
 	border: 1px solid #ddd;
 	padding: 20px;
 	width: 25%;
+	position: absolute;
+	right: 0;
+	top: 0;
 	text-align: center;
+	box-sizing: border-box;
 }
 
 	#s-img {
@@ -289,9 +293,10 @@ aside {
 	.post-info {
 		border: 1px solid #ddd;
 		margin: 0;
-		margin-top: -8px;
+		margin-top: -10px;
 		padding: 60px;
 		text-align: center;
+		font-size: 16px;
 	}
 
 	.p-tags a {
@@ -411,10 +416,46 @@ footer {
 
 
 
+@media (max-width: 1500px) {
+	#posts {
+	width: 67%;
+	}
+
+
+	.ai {
+		margin: 0 5px;
+	}
+}
 
 @media (max-width: 1130px) {
 	.links {
 		visibility: hidden;
+	}
+
+	aside {
+		font-size: 1rem;
+	}
+
+	#posts {
+	width: 65%;
+	font-size: 3rem;
+	}
+
+	.post-foot {
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		color: #bbb;
+		padding: 10px 0;
+		text-align: center;
+		font-size: 14px;
+		text-transform: uppercase;
+		margin-top: 30px;
+	}
+
+	.pf-right {
+		display: block;
+		float: none;
+		margin-top: 10px;
 	}
 }
 
@@ -431,5 +472,27 @@ footer {
 
 	#right {
 		margin-top: -27px;
+	}
+}
+
+@media (max-width: 940px) {
+	#t-msg {
+		visibility: hidden;
+	}
+
+	aside {
+		width: 100%;
+		position: unset;
+		text-align: center;
+		margin-bottom: 30px;
+		margin: 0;
+	}
+
+	#posts {
+		width: 100%;
+	}
+
+	#drama {
+		width: 100%;
 	}
 }
